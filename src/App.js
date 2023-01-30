@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
-import Header from "./components/Header";
-import Join from "./ele/Join";
-import Modal from "./components/Modal";
+import Header from "./Components/Header";
+import Join from "./Elements/Join";
+import Modal from "./Components/Modal";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import Main from "./Pages/Main";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -9,11 +12,14 @@ function App() {
   return (
     <>
       <Header />
+      <Header />
       <Modal width="400px" showModal={showModal} setShowModal={setShowModal}>
         <Join setShowModal={setShowModal} />
       </Modal>
-
-      <button onClick={() => setShowModal((prev) => !prev)}>버튼</button>
+      <Routes>
+        <Route path="/" element={<Home setShowModal={setShowModal} />} />
+        <Route path="/main" element={<Main />} />
+      </Routes>
     </>
   );
 }

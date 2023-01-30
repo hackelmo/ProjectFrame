@@ -37,6 +37,9 @@ const Modal = ({ width, showModal, children, setShowModal }) => {
             variants={modal}
             initial="hidden"
             animate="visible"
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
           >
             {children}
           </StModal>
@@ -68,4 +71,5 @@ const StModal = styled(motion.div)`
   background: white;
   border-radius: 10px;
   text-align: center;
+  z-index: 2;
 `;
