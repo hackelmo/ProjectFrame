@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { ICON, StWrapper } from "../Test";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import axios from "axios";
 
-const Home = ({ setShowModal }) => {
+const Home = ({ setShowModal, currentPage }) => {
+  const onClick = () => {};
   return (
     <>
       <StWrapper color={ICON.color}>
@@ -12,6 +15,7 @@ const Home = ({ setShowModal }) => {
           <button>메인페이지</button>
         </Link>
         <button onClick={() => setShowModal((prev) => !prev)}>모달 버튼</button>
+        <button onClick={onClick}> 안녕</button>
       </StWrapper>
     </>
   );

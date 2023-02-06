@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const backdrop = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: {} },
+  visible: { opacity: 1, transition: { duration: 0.3 } },
 };
 
 const modal = {
@@ -43,6 +43,7 @@ const Modal = ({ width, showModal, children, setShowModal }) => {
           >
             {children}
           </StModal>
+          <Stdiv>aasdfasdf</Stdiv>
         </StBackDrop>
       )}
     </AnimatePresence>
@@ -66,10 +67,14 @@ const StBackDrop = styled(motion.div)`
 
 const StModal = styled(motion.div)`
   width: ${({ width }) => width};
-  /* margin: 0 auto; */
+  margin: 0 auto;
   padding: 40px 20px;
   background: white;
   border-radius: 10px;
   text-align: center;
   z-index: 2;
+`;
+
+const Stdiv = styled.div`
+  border: 1px solid black;
 `;

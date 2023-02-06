@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Join = ({ setShowModal }) => {
+const EndModal = ({ setShowModal }) => {
   return (
     <StWrapper>
       <p>Want to make another pizza?</p>
@@ -13,7 +13,7 @@ const Join = ({ setShowModal }) => {
   );
 };
 
-export default Join;
+export default EndModal;
 
 const StWrapper = styled.div`
   color: black;

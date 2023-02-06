@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import A from "../logo.svg";
 
 const svgVariants = {
   hidden: { rotate: -180 },
@@ -33,7 +34,7 @@ const Header = () => {
       <motion.div
         className="logo"
         drag
-        // dragConstraints={{ left: 0, top: 0, right: 0, bottom: 50 }}
+        dragConstraints={{ left: 0, top: 0, right: 0, bottom: 50 }}
         dragElastic={0.5}
       >
         <StPizzaSvg
@@ -55,6 +56,7 @@ const Header = () => {
             d="M50 30 L50 -10 C50 -10 90 -10 90 30 Z"
           />
         </StPizzaSvg>
+        {/* <img src={A} /> */}
       </motion.div>
       <StTitle
         className="title"
@@ -93,4 +95,10 @@ const StTitle = styled(motion.div)`
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 10px;
   }
+`;
+
+const Stinput = styled.div`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
 `;
