@@ -43,7 +43,6 @@ const Modal = ({ width, showModal, children, setShowModal }) => {
           >
             {children}
           </StModal>
-          <Stdiv>aasdfasdf</Stdiv>
         </StBackDrop>
       )}
     </AnimatePresence>
@@ -73,8 +72,4 @@ const StModal = styled(motion.div)`
   border-radius: 10px;
   text-align: center;
   z-index: 2;
-`;
-
-const Stdiv = styled.div`
-  border: 1px solid black;
 `;

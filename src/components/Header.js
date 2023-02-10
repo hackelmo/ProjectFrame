@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import A from "../logo.svg";
 
 const svgVariants = {
   hidden: { rotate: -180 },
@@ -56,7 +55,6 @@ const Header = () => {
             d="M50 30 L50 -10 C50 -10 90 -10 90 30 Z"
           />
         </StPizzaSvg>
-        {/* <img src={A} /> */}
       </motion.div>
       <StTitle
         className="title"

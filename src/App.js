@@ -13,7 +13,6 @@ function App() {
   return (
     <>
       <Header />
-
       <Modal width="400px" showModal={showModal} setShowModal={setShowModal}>
         <EndModal setShowModal={setShowModal} />
       </Modal>
