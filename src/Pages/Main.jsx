@@ -1,30 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { StWrapper } from "../Test";
+import { BootStrap } from "../BootStrap/BootStrap";
 
 const Main = () => {
-  const [a, setA] = useState(new Array(33).fill("_"));
-  const ref = useRef();
-  useEffect(() => {
-    ref.current.scrollTo(0, ref.current.scrollHeight);
-  });
-  console.log("a");
+  const { StWrapper } = BootStrap;
   return (
     <>
       <StWrapper>
-        <StChat ref={ref}>
-          {new Array(33).fill("_").map((_, i) => (
-            <div key={i}>채팅{i}</div>
-          ))}
-          {new Array(33).fill("_").map((_, i) => (
-            <div key={i}>채팅{i}</div>
-          ))}
-        </StChat>
-        {/* <div onClick={() => setA(2)}>메인페이지입니다</div>
         <Link to={"/"}>
           <button>뒤로</button>
-        </Link> */}
+        </Link>
       </StWrapper>
     </>
   );

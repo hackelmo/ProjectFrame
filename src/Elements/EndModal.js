@@ -5,7 +5,7 @@ import styled from "styled-components";
 const EndModal = ({ setShowModal }) => {
   return (
     <StWrapper>
-      <p>Want to make another pizza?</p>
+      <p>Want to go Home?</p>
       <Link to="/">
         <button onClick={() => setShowModal(false)}>Start Again</button>
       </Link>

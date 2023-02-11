@@ -48,10 +48,16 @@ body {
     background-size: cover;
     height: 100vh;
     background-color: #2b2b2b;
-    //div박스 선택안되게하기?
+    //div박스 선택안되게하기
+    //크로스브라우징을위해서 적용한다
     -webkit-user-select:none;
+    //사파리
     -moz-user-select:none;
+    //파폭
     -ms-user-select:none;
+    //익스플로러
+    -o-user-select:none;
+    //오페라
     user-select:none
   }
   `;

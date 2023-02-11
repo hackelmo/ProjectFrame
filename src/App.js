@@ -17,12 +17,7 @@ function App() {
         <EndModal setShowModal={setShowModal} />
       </Modal>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home setShowModal={setShowModal} currentPage={currentPage} />
-          }
-        />
+        <Route path="/" element={<Home setShowModal={setShowModal} />} />
         <Route path="/main" element={<Main />} />
       </Routes>
     </>

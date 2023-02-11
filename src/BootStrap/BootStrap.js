@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
 
 const StTitle = styled.div`
   width: ${({ width }) => width || "388px"};

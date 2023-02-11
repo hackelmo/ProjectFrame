@@ -1,30 +1,30 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
-import styled, { css } from "styled-components";
-import { ICON, StWrapper } from "../Test";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { Center } from "../BootStrap/BootStrap";
+import styled from "styled-components";
+import { BootStrap, Center } from "../BootStrap/BootStrap";
+import Test from "../Elements/Test";
 
-const Home = ({ setShowModal, currentPage }) => {
-  const onClick = () => {};
+// const KAKAO_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${process.env.REACT_KAKAO_ID}&redirect_uri=${process.env.REACT_APP_REDIRECT}kakao&response_type=code`;
+
+const Home = ({ setShowModal }) => {
+  const { StWrapper } = BootStrap;
+  const [valueForFirstChild, setValueForFirstChild] = useState(null);
+  const handleClick = useCallback(() => {}, []);
+
   return (
-    <>
-      <div>aa</div>
-      <Sta>박스1</Sta>
-      <Stb>박스1</Stb>
-      {/* <StWrapper color={ICON.color}>
-        <div>aaa</div>
-        <div>홈페이지입니다</div>
-        <Link to={"/main"}>
-          <button>메인페이지</button>
-        </Link>
-        <button onClick={() => setShowModal((prev) => !prev)}>
-          모달ON/OFF
-        </button>
-        <StButton onClick={onClick}>온클릭핸들러</StButton>
-        <Stdiv style={{ width: "1000px", height: "1000px" }}>a</Stdiv>
-      </StWrapper> */}
-    </>
+    <StWrapper>
+      <Link to={"/main"}>
+        <button>메인페이지</button>
+      </Link>
+      <button onClick={() => setShowModal((prev) => !prev)}>모달ON</button>
+      <a href={"https://www.naver.com"}>
+        <button>카카오 로그인</button>
+      </a>
+      <button onClick={() => setValueForFirstChild((pr) => pr + 1)}>
+        ㅎㅎㅎ
+      </button>
+      <Test handleClick={handleClick}></Test>
+    </StWrapper>
   );
 };
 
@@ -35,21 +35,7 @@ const StButton = styled.button`
   background-color: ${(props) => props.theme.color.blue};
 `;
 
-const Stdiv = styled.div`
+const Stdv = styled.div`
   border: 1px solid green;
   ${Center}
-`;
-
-const Sta = styled.div`
-  width: 100px;
-  height: 100px;
-  border: 1px solid red;
-  box-sizing: content-box;
-`;
-
-const Stb = styled.div`
-  width: 100px;
-  height: 100px;
-  border: 1px solid red;
-  box-sizing: border-box;
 `;
