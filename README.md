@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+회의 / 진행도 체크 ① 진행도 체크 : 오후 7시 반 ② dev 병합 회의 : 오후 9시 ③ 사전 고지없이 회의 불참시 스타벅스 아이스아메리카노 돌리기
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Git & Github ① Git master : 정호영 ② Git Flow 방식 사용(main-dev-feature/페이지-feature/페이지_기능 / hotfixed) ③ feature/페이지는 각자 에러없는 기능구현이 끝난 경우에 PR ④ 기능구현은 feature/페이지_기능에서 작업 ⑤ commit 전 console.log / 불필요 주석 제거 ⑥ PR은 기능단위 feature/페이지 까지(개인) ⑦ dev 병합은 수시 회의를 통해 필요시 진행 ⑧ commit rules
 
-## Available Scripts
+[ADD] : asset, dependency 추가(이미지 파일)
+[FEAT] : 새로운 기능 추가(view 포함)
+[FIX] : 이슈 해결시
+[PR] : PR 시
+[CHORE] : 빌드 업무 수정
+[ECT] : 기타 ⑨ 트러블 슈팅 관리
+발생시 : issue에 공유
+해결시 : wiki에 저장
+CSS 순서 ① position ② display ③ width/height ④ margin/padding ⑤ color 관련 ⑥ text 관련 ⑦ tranform, transition, animation ⑧ 기타
 
-In the project directory, you can run:
+ECT ① 명명규칙
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+react 렌더링하는 (뷰)컴포넌트 jsx 생성 / 그 외(UI, hook)에는 js로 생성
+camelCase 사용
+스타일 컴포넌트, UI 컴포넌트 St 시작
+스타일 컴포넌트(Wrapper, Container, Box)
+thunk 함수 : _함수명 ( 2개)
+함수이름 기능(동사)이름(명사)
+addCommentLike ② import 순서
+react, library, component, func, hook ③ 함수는 화살표 함수 사용 : ( ) => { } / 기본은 ( ) => ④ 훅 사용 규칙
+순서 useDispatch, useNavigate, useState, useSelect, 컴스텀 훅 ...상수/ 변수 지정...function, useEffect
+useSelect 사용시 객체분할로 선언 ⑤ key ={기능명${i}} ⑥ export default 아래에 스타일 컴포넌트 ⑦ mokdata 사용시 import해서 사용, commit 전 삭제 ⑧ 라이브러리 사용시 미리 회의 후 사용 / 개별 테스트는 feature/페이지_기능에서 사용(회의 전 feature/페이지로 PR x) ⑨ 배열함수 사용시 ((el)=>el.map((item)=> ) )
+폴더 구조 src |-- api |-- axios |-- assets |-- fonts |-- images |-- components |-- common |-- ui |-- StButton.jsx |-- elements |-- form |-- modal |-- StModal.jsx |-- chat |-- Chat.jsx |-- hooks |-- helpers |-- redux |-- store |-- modules |-- pages |-- lobby |-- elements |-- Container.jsx |-- Room.jsx |-- Profile.jsx |-- Lobby.jsx |-- styles |-- fonts |-- globalstyle |-- share |-- Router.jsx
